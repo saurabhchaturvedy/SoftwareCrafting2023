@@ -3,7 +3,7 @@ package main.java.DesignPatterns.Adapter;
 public class SocketAdapterImpl extends Socket implements SocketAdapter {
     @Override
     public Volt get10Volts() {
-        Volt voltage = getVoltage();
+        Volt voltage = getStandardVoltage();
         return convertToBatteryVoltage(voltage, 22);
     }
 

@@ -6,7 +6,7 @@ public class SocketObjectAdapterImpl implements SocketAdapter {
 
     @Override
     public Volt get10Volts() {
-        Volt voltage = socket.getVoltage();
+        Volt voltage = socket.getStandardVoltage();
         return convertToBatteryVoltage(voltage, 22);
     }
 
