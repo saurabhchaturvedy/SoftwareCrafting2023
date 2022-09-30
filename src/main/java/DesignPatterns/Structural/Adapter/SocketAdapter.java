@@ -1,4 +1,4 @@
-package main.java.DesignPatterns.Adapter;
+package main.java.DesignPatterns.Structural.Adapter;
 
 public interface SocketAdapter {
 

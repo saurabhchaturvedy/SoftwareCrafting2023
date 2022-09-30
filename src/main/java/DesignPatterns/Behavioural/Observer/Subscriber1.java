@@ -1,4 +1,4 @@
-package main.java.DesignPatterns.Observer;
+package main.java.DesignPatterns.Behavioural.Observer;
 
 public class Subscriber1 extends Observer {
 

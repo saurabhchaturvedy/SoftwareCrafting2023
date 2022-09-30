@@ -1,8 +1,7 @@
-package main.java.DesignPatterns.Observer;
+package main.java.DesignPatterns.Behavioural.Observer;
 
-public class Subscriber2 extends Observer {
-
-    Subscriber2(CricketScore cricketScore) {
+public class Subscriber3 extends Observer {
+    Subscriber3(CricketScore cricketScore) {
         this.cricketScore = cricketScore;
         this.cricketScore.addObserver(this);
     }

@@ -1,12 +1,9 @@
-package main.java.DesignPatterns.Adapter;
+package main.java.DesignPatterns.Structural.Adapter;
 
-public class SocketObjectAdapterImpl implements SocketAdapter {
-
-    Socket socket = new Socket();
-
+public class SocketAdapterImpl extends Socket implements SocketAdapter {
     @Override
     public Volt get10Volts() {
-        Volt voltage = socket.getStandardVoltage();
+        Volt voltage = getStandardVoltage();
         return convertToBatteryVoltage(voltage, 22);
     }
 
