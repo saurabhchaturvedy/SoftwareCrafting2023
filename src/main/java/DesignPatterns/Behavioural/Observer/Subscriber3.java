@@ -9,6 +9,6 @@ public class Subscriber3 extends Observer {
     @Override
     public void update() {
 
-        System.out.println(" Subscriber 1 notified : " + cricketScore.getScoreBoard());
+        System.out.println(" Subscriber 3 notified : " + cricketScore.getScoreBoard());
     }
 }
