@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
-        String nameOfParkingLot = "Pintosss Parking Lot";
+        String nameOfParkingLot = "Sarjapur Parking Lot";
         Address address = new Address.Builder("Bangalore").country("India").state("KA").build();
         Map<ParkingSlotType, Map<String, ParkingSlot>> allSlots = new HashMap<>();
         Map<String, ParkingSlot> compactSlot = new HashMap<>();
