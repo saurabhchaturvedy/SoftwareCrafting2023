@@ -31,7 +31,7 @@ public class Board {
         cells[ladder.start] = ladder;
     }
 
-    Cell get(int position) {
+    Cell getCell(int position) {
         return cells[position];
     }
 }

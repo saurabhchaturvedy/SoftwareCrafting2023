@@ -16,7 +16,7 @@ public class Player {
         if (newPosition > board.size) return false;
 
         System.out.println(" player's piece is now at position : " + newPosition);
-        Cell cell = board.get(newPosition);
+        Cell cell = board.getCell(newPosition);
 
         if (cell.type == CellType.TARGET) {
             return true;
