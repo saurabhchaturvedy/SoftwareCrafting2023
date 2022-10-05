@@ -6,18 +6,18 @@ public class Game {
     private final Player[] players;
     private Player currentPlayer;
     private GameStatus gameStatus;
-    private final int cellCount = 3;
-    private final int noOfPlayers = 2;
-    private final int[] arrRow = new int[cellCount];
-    private final int[] arrCol = new int[cellCount];
+    private final int size = 3;
+    private final int[] arrRow = new int[size];
+    private final int[] arrCol = new int[size];
     private int drl = 0;
     private int dlr = 0;
 
     public Game(Player p1, Player p2) {
+        int noOfPlayers = 2;
         players = new Player[noOfPlayers];
         players[0] = p1;
         players[1] = p2;
-        board = new Board(cellCount);
+        board = new Board(size);
         currentPlayer = players[0];
         gameStatus = GameStatus.PLAYING;
     }
@@ -57,7 +57,7 @@ public class Game {
     }
 
     private boolean checkIfDraw(int row, int col) {
-        if (drl > cellCount || dlr > cellCount || arrCol[col] > cellCount || arrRow[row] > cellCount || -cellCount > arrRow[row] || drl < -cellCount || dlr < -cellCount || arrCol[col] < -cellCount) {
+        if (drl > size || dlr > size || arrCol[col] > size || arrRow[row] > size || -size > arrRow[row] || drl < -size || dlr < -size || arrCol[col] < -size) {
 
             gameStatus = GameStatus.DRAW;
             System.out.println("Game has been finished with status DRAW!!");
@@ -80,12 +80,12 @@ public class Game {
         if (currentPlayer.getId().equals(players[0].getId())) {
             if (row == col) {
                 dlr++;
-            } else if (row + col == cellCount - 1) {
+            } else if (row + col == size - 1) {
                 drl++;
             }
             arrRow[row] = arrRow[row] + 1;
             arrCol[col] = arrCol[col] + 1;
-            if (arrRow[row] == cellCount || arrCol[col] == cellCount || drl == cellCount || dlr == cellCount) {
+            if (arrRow[row] == size || arrCol[col] == size || drl == size || dlr == size) {
                 gameStatus = GameStatus.WON;
                 System.out.println(currentPlayer.getName() + " has won the Game!!");
                 return true;
@@ -93,12 +93,12 @@ public class Game {
         } else {
             if (row == col) {
                 dlr--;
-            } else if (row + col == -(cellCount - 1)) {
+            } else if (row + col == -(size - 1)) {
                 drl--;
             }
             arrRow[row] = arrRow[row] - 1;
             arrCol[col] = arrCol[col] - 1;
-            if (arrRow[row] == -cellCount || arrCol[col] == -cellCount || drl == -cellCount || dlr == -cellCount) {
+            if (arrRow[row] == -size || arrCol[col] == -size || drl == -size || dlr == -size) {
                 gameStatus = GameStatus.WON;
                 System.out.println(currentPlayer.getName() + " has won the Game!!");
                 return true;
@@ -110,7 +110,7 @@ public class Game {
     }
 
     private boolean isValidMove(int row, int col) {
-        return row < cellCount && col < cellCount && board.cells[row][col] != null;
+        return row < size && col < size && board.cells[row][col] != null;
     }
 
 
