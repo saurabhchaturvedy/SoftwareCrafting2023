@@ -16,9 +16,9 @@ _A curated list of Self explored System Design Topics._ <br>
 
 ### Curated Topic Links
 
-| Topic                                                             | Link                                       | 
+| Topic                                                             | Comments                                   | 
 |-------------------------------------------------------------------|--------------------------------------------|
-| [Consistent Hashing](https://www.youtube.com/watch?v=JEiIIjX10zE) | Good link to understand consistent hashing |
+| [Consistent Hashing](https://www.youtube.com/watch?v=JEiIIjX10zE) |  |
 
 
 
