@@ -19,7 +19,7 @@ _A curated list of Self explored System Design Topics._ <br>
 | Topic                                                             | Comments                                   | 
 |-------------------------------------------------------------------|--------------------------------------------|
 | [Consistent Hashing](https://www.youtube.com/watch?v=JEiIIjX10zE) |  |
-
+| [CAP Theorem](https://www.youtube.com/watch?v=k-Yaq8AHlFA&t=6s) |  |
 
 
 **[⬆ Back to Index](#index)**
