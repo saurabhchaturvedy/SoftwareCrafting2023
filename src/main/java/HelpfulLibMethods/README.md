@@ -19,6 +19,9 @@ _A curated list of helpful lib methods to recall. <br>
 | To do                 | Method Snippet | 
 |-----------------------|----------------|
 | Convert list to array |     String[] strings = list.stream().toArray(String[]::new);           |
+| Convert array to list |     Arrays.stream(numbers)
+      .boxed()
+      .collect(Collectors.toList());          |
 
 
 
