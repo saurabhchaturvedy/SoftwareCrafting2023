@@ -16,10 +16,11 @@ _A curated list of helpful lib methods to recall. <br>
 
 ### Curated Topic Links
 
-| To do                 | Method Snippet | 
-|-----------------------|----------------|
-| Convert list to array |     String[] strings = list.stream().toArray(String[]::new);           |
-| Convert array to list |      Arrays.stream(numbers).boxed().collect(Collectors.toList());         |
+| To do                                  | Method Snippet | 
+|----------------------------------------|----------------|
+| Convert list to array                  |     String[] strings = list.stream().toArray(String[]::new);           |
+| Convert array to list                  |      Arrays.stream(numbers).boxed().collect(Collectors.toList());         |
+| Check if a char is equal to whitespace |      Character.isSpaceChar(c) || Character.isWhitespace(c)         |
 
 
 
