@@ -1,27 +1,44 @@
-<div align='center'>
 
 # Helpful lib methods for coding problems/interviews
 
-_A curated list of helpful lib methods to recall. <br>
-
-![Message](https://img.shields.io/badge/I%20%E2%9D%A4%20-OpenSource-%23ff0055) ![Awesome-Repos](https://img.shields.io/badge/Awesome--repos-%23ff0055) ![GitHub](https://img.shields.io/github/license/pawelborkar/awesome-repos?color=%23ff0055)
-
-</div> <br>
-
-> _Pull Requests are being welcomed.Please see the [Contributing Guide](CONTRIBUTING.md) before opening a Pull Request._
-
-## Index
 
 
 
-### Curated Topic Links
+## Installation
 
-| To do                                  | Method Snippet | 
-|----------------------------------------|----------------|
-| Convert list to array                  |     String[] strings = list.stream().toArray(String[]::new);           |
-| Convert array to list                  |      Arrays.stream(numbers).boxed().collect(Collectors.toList());         |
-| Check if a char is equal to whitespace |      Character.isSpaceChar(c) || Character.isWhitespace(c)         |
+Convert list to array
 
+```bash
+ String[] strings = list.stream().toArray(String[]::new);
+```
 
+Convert array to list
 
-**[⬆ Back to Index](#index)**
+```bash
+ Arrays.stream(numbers).boxed().collect(Collectors.toList());
+```
+
+Sort a Map by values
+
+```bash
+ Map<String,Person> map = new HashMap<>();
+map.put("g",new Person(5, "EE", 51, Person.SEX.FEMALE, "A"));
+map.put("a",new Person(4, "DD", 25, Person.SEX.MALE, "D"));
+map.put("e",new Person(3, "CC", 44, Person.SEX.FEMALE,"B"));
+
+Map<String,Person> sortedNewMap = map.entrySet().stream().sorted((e1,e2)->
+        e1.getValue().getLocation().compareTo(e2.getValue().getLocation()))
+        .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue,
+                (e1, e2) -> e1, LinkedHashMap::new));
+sortedNewMap.forEach((key,val)->{
+    System.out.println(key+ " = "+ val.toString());
+});
+
+OR 
+
+map.entrySet().stream()
+        .sorted(Map.Entry.<String, Integer>comparingByValue().reversed()) 
+        .limit(10) 
+        .forEach(System.out::println);
+```
+    
