@@ -41,4 +41,14 @@ map.entrySet().stream()
         .limit(10) 
         .forEach(System.out::println);
 ```
+
+Sort map by Key using Comparator
+
+```bash
+ Comparator<Name> byName = (Name o1, Name o2)-> o1.getFirstName().compareTo(o2.getFirstName());
+		
+LinkedHashMap<Name, Integer> sortedMap = map.entrySet().stream()
+                                            .sorted(Map.Entry.<Name,Integer>comparingByKey(byName))
+                                            .collect(Collectors.toMap(Map.Entry::getKey,Map.Entry::getValue,(e1,e2)->e1,LinkedHashMap::new));
+```
     
