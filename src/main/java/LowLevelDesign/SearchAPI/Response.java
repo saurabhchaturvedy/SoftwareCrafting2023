@@ -1,8 +1,6 @@
 package main.java.LowLevelDesign.SearchAPI;
 
-import java.util.HashMap;
-import java.util.Map;
-public class Root {
+public class Response {
     private Integer id;
     private String name;
     private String username;

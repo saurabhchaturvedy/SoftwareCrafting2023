@@ -13,8 +13,8 @@ public class Game {
     private int dlr = 0;
 
     public Game(Player p1, Player p2) {
-        int noOfPlayers = 2;
-        players = new Player[noOfPlayers];
+
+        players = new Player[2];
         players[0] = p1;
         players[1] = p2;
         board = new Board(size);
