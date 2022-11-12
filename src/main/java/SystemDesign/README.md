@@ -16,10 +16,11 @@ _A curated list of Self explored System Design Topics._ <br>
 
 ### Curated Topic Links
 
-| Topic                                                             | Comments                                   | 
-|-------------------------------------------------------------------|--------------------------------------------|
-| [Consistent Hashing](https://www.youtube.com/watch?v=JEiIIjX10zE) |  |
-| [CAP Theorem](https://www.youtube.com/watch?v=k-Yaq8AHlFA&t=6s) |  |
+| Topic                                                                | Comments                                   | 
+|----------------------------------------------------------------------|--------------------------------------------|
+| [Consistent Hashing](https://www.youtube.com/watch?v=JEiIIjX10zE)    |  |
+| [CAP Theorem](https://www.youtube.com/watch?v=k-Yaq8AHlFA&t=6s)      |  |
+| [SOLID Principles](https://www.youtube.com/watch?v=1Unn56984Cw) |  |
 
 
 **[⬆ Back to Index](#index)**
