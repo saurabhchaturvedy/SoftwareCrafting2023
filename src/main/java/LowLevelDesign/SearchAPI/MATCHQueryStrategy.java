@@ -20,7 +20,7 @@ public class MATCHQueryStrategy implements QueryStrategy {
         List<PropertyDescriptor> beanGettersList = Arrays.asList(Introspector.getBeanInfo(response.getClass(), Object.class).getPropertyDescriptors());
         List<String> queryFields = new ArrayList<>();
 
-        responses.stream().map(Response::getAddress).filter(x->x.)
+      //  responses.stream().map(Response::getAddress).filter(x->x.)
 
         String output = fields[0].substring(0, 1).toUpperCase().concat(fields[0].substring(1));
 
