@@ -20,7 +20,7 @@ _A curated list of Self explored System Design Topics._ <br>
 |---------------------------------------------------------------------------------|--------------------------------------------|
 | [Consistent Hashing](https://www.youtube.com/watch?v=JEiIIjX10zE)               |  |
 | [CAP Theorem](https://www.youtube.com/watch?v=k-Yaq8AHlFA&t=6s)                 |  |
-| [SOLID Principles](https://www.youtube.com/watch?v=1Unn56984Cw)                 |  |
+| [SOLID Principles](https://www.programmergirl.com/solid-design-principles/)                 |  |
 | [Distributed Message Queue](https://www.youtube.com/watch?v=iJLL-KPqBpM&t=604s) |  |
 | [Notification Service](https://www.youtube.com/watch?v=bBTPZ9NdSk8&t=1164s)     |  |
 | [Rate Limiting](https://www.youtube.com/watch?v=FU4WlwfS3G0&t=1615s)            |  |
