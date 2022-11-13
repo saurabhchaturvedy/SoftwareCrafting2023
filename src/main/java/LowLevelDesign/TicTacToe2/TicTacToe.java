@@ -40,9 +40,12 @@ public class TicTacToe {
     private boolean checkIfWon(List<Cell> moves) {
 
         boolean isDiagonalStrike = isDiagonalStrike(moves);
+        if (isDiagonalStrike) return true;
         boolean isColumnStrike = isSameColumnStrike(moves);
+        if (isColumnStrike) return true;
         boolean isRowStrike = isSameRowStrike(moves);
-        return isColumnStrike || isRowStrike || isDiagonalStrike;
+        if (isRowStrike) return true;
+        return false;
     }
 
     private boolean isDiagonalStrike(List<Cell> moves) {
@@ -57,87 +60,34 @@ public class TicTacToe {
     }
 
     private boolean isSameColumnStrike(List<Cell> moves) {
-        moves.sort(Comparator.comparingInt(x-> x.col));
+        moves.sort(Comparator.comparingInt(x -> x.col));
         int row = moves.get(0).getRow();
         int col = moves.get(0).getCol();
         boolean isContinuousCell = false;
-        int strikes=0;
+        int strikes = 0;
         Cell lastCell = new Cell(-1, -1);
         Map<Integer, List<Cell>> collect = moves.stream().collect(Collectors.groupingBy(Cell::getCol));
-        for(Map.Entry<Integer,List<Cell>> entry: collect.entrySet())
-        {
-            if(entry.getValue().size()== board.row)
-            {
+        for (Map.Entry<Integer, List<Cell>> entry : collect.entrySet()) {
+            if (entry.getValue().size() == board.row) {
                 return true;
             }
         }
         return false;
-
-//        for (Cell cell : moves) {
-//            if (lastCell.row >= 0 && lastCell.col >= 0) {
-//                if (cell.col == lastCell.col) {
-//                    strikes++;
-//
-//                    lastCell.row = cell.row;
-//                    lastCell.col = cell.col;
-//                    if(strikes==3)
-//                    {
-//                        isContinuousCell = true;
-//                        return true;
-//                    }
-//                }
-//                else {
-//                    lastCell.row = cell.row;
-//                    lastCell.col = cell.col;
-//                }
-//            } else {
-//                lastCell.row = cell.row;
-//                lastCell.col = cell.col;
-//            }
-//
-//        }
-//
-//        return isContinuousCell;
     }
 
     private boolean isSameRowStrike(List<Cell> moves) {
-        moves.sort(Comparator.comparingInt(x-> x.row));
+        moves.sort(Comparator.comparingInt(x -> x.row));
         int row = moves.get(0).getRow();
         int col = moves.get(0).getCol();
         boolean isContinuousCell = false;
-        int strikes=0;
+        int strikes = 0;
         Cell lastCell = new Cell(-1, -1);
         Map<Integer, List<Cell>> collect = moves.stream().collect(Collectors.groupingBy(Cell::getRow));
-        for(Map.Entry<Integer,List<Cell>> entry: collect.entrySet())
-        {
-            if(entry.getValue().size()== board.row)
-            {
+        for (Map.Entry<Integer, List<Cell>> entry : collect.entrySet()) {
+            if (entry.getValue().size() == board.row) {
                 return true;
             }
         }
         return false;
-//        for (Cell cell : moves) {
-//            if (lastCell.row >= 0 && lastCell.col >= 0) {
-//                if (cell.row == lastCell.row) {
-//                    strikes++;
-//                    lastCell.row = cell.row;
-//                    lastCell.col = cell.col;
-//                    if(strikes==3)
-//                    {
-//                        isContinuousCell = true;
-//                        return isContinuousCell;
-//                    }
-//                } else {
-//                    lastCell.row = cell.row;
-//                    lastCell.col = cell.col;
-//                }
-//            } else {
-//                lastCell.row = cell.row;
-//                lastCell.col = cell.col;
-//            }
-//
-//        }
-//
-//        return isContinuousCell;
     }
 }
