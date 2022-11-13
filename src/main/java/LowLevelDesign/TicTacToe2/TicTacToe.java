@@ -21,6 +21,9 @@ public class TicTacToe {
 
         board.showBoardStatus();
         if (moves == board.row * board.cols || isWon) {
+            if (moves == board.row * board.cols) {
+                System.out.println("No player won the game...it's a DRAW !!");
+            }
             return;
         }
         Cell cell = new Cell(row, col, player.piece);
@@ -34,6 +37,9 @@ public class TicTacToe {
             if (isWon) {
                 System.out.println("Player with piece " + player.piece + " has won");
             }
+        }
+        if (moves == board.row * board.cols) {
+            System.out.println("No player won the game...it's a DRAW !!");
         }
     }
 
