@@ -1,5 +1,6 @@
 package main.java.LowLevelDesign.TicTacToe2;
 
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
@@ -50,10 +51,41 @@ public class TicTacToe {
 
     private boolean isDiagonalStrike(List<Cell> moves) {
 
-        int rowSum = moves.stream().mapToInt(Cell::getRow).sum();
-        int colSum = moves.stream().mapToInt(Cell::getCol).sum();
+        int row = 0;
+        int col = 0;
+        List<Cell> diagonalCells_1 = new ArrayList<>();
+        while (row < board.row && col < board.cols) {
+            Cell cell = new Cell(row, col);
+            diagonalCells_1.add(cell);
+            row++;
+            col++;
+        }
 
-        return rowSum == colSum;
+        row = 0;
+        col = 2;
+        List<Cell> diagonalCells_2 = new ArrayList<>();
+        while (row < board.row && col >= 0) {
+            Cell cell = new Cell(row, col);
+            diagonalCells_2.add(cell);
+            row++;
+            col--;
+        }
+        int diagonalCell1count = 0;
+        for (Cell cell : moves) {
+            if (diagonalCells_1.contains(cell)) {
+                diagonalCell1count++;
+
+            }
+        }
+
+        int diagonalCell2count = 0;
+        for (Cell cell : moves) {
+            if (diagonalCells_2.contains(cell)) {
+                diagonalCell2count++;
+            }
+        }
+
+        return diagonalCell1count == board.row || diagonalCell2count == board.row;
     }
 
     private boolean isColumnStrike(List<Cell> moves) {

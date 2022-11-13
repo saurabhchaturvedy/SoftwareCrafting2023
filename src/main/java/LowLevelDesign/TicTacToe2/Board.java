@@ -3,7 +3,7 @@ package main.java.LowLevelDesign.TicTacToe2;
 public class Board {
 
 
-    static Cell[][] cells;
+    Cell[][] cells;
 
     int row;
 
