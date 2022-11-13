@@ -50,13 +50,10 @@ public class TicTacToe {
 
     private boolean isDiagonalStrike(List<Cell> moves) {
 
-        for (Cell cell : moves) {
-            if (cell.getRow() != cell.getCol()) {
-                return false;
-            }
-        }
+        int rowSum = moves.stream().mapToInt(Cell::getRow).sum();
+        int colSum = moves.stream().mapToInt(Cell::getCol).sum();
 
-        return true;
+        return rowSum == colSum;
     }
 
     private boolean isColumnStrike(List<Cell> moves) {

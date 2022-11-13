@@ -9,14 +9,14 @@ public class Main {
         Player playerX = new Player(Piece.X);
         Player playerO = new Player(Piece.O);
 
-        ticTacToe.play(playerO, 0, 1);
-        ticTacToe.play(playerX, 1, 1);
         ticTacToe.play(playerO, 0, 0);
-        ticTacToe.play(playerX, 0, 2);
-        ticTacToe.play(playerO, 2, 0);
-        ticTacToe.play(playerX, 1, 2);
-        ticTacToe.play(playerO, 2, 1);
         ticTacToe.play(playerX, 1, 0);
+        ticTacToe.play(playerO, 2, 0);
+        ticTacToe.play(playerX, 0, 1);
+        ticTacToe.play(playerO, 1, 1);
+        ticTacToe.play(playerX, 2, 1);
+        ticTacToe.play(playerO, 0, 2);
+
 
 
     }
