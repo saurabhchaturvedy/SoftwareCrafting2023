@@ -28,7 +28,7 @@ public class TicTacToe {
         board.cells[row][col] = cell;
         player.addMove(cell);
         board.showBoardStatus();
-        if (player.getTotalMoves() >= board.row) {
+        if (player.getMoves().size() >= board.row) {
             isWon = checkIfWon(player.getMoves());
             if (isWon) {
                 System.out.println("Player with piece " + player.piece + " has won");

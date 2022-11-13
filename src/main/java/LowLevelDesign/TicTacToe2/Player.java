@@ -17,10 +17,6 @@ public class Player {
         this.moves.add(cell);
     }
 
-    public int getTotalMoves() {
-        return this.moves.size();
-    }
-
     public List<Cell> getMoves() {
         return this.moves;
     }
