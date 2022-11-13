@@ -61,11 +61,6 @@ public class TicTacToe {
 
     private boolean isColumnStrike(List<Cell> moves) {
         moves.sort(Comparator.comparingInt(x -> x.col));
-        int row = moves.get(0).getRow();
-        int col = moves.get(0).getCol();
-        boolean isContinuousCell = false;
-        int strikes = 0;
-        Cell lastCell = new Cell(-1, -1);
         Map<Integer, List<Cell>> collect = moves.stream().collect(Collectors.groupingBy(Cell::getCol));
         for (Map.Entry<Integer, List<Cell>> entry : collect.entrySet()) {
             if (entry.getValue().size() == board.row) {
@@ -77,11 +72,6 @@ public class TicTacToe {
 
     private boolean isRowStrike(List<Cell> moves) {
         moves.sort(Comparator.comparingInt(x -> x.row));
-        int row = moves.get(0).getRow();
-        int col = moves.get(0).getCol();
-        boolean isContinuousCell = false;
-        int strikes = 0;
-        Cell lastCell = new Cell(-1, -1);
         Map<Integer, List<Cell>> collect = moves.stream().collect(Collectors.groupingBy(Cell::getRow));
         for (Map.Entry<Integer, List<Cell>> entry : collect.entrySet()) {
             if (entry.getValue().size() == board.row) {
