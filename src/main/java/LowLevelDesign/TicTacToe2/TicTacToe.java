@@ -41,9 +41,9 @@ public class TicTacToe {
 
         boolean isDiagonalStrike = isDiagonalStrike(moves);
         if (isDiagonalStrike) return true;
-        boolean isColumnStrike = isSameColumnStrike(moves);
+        boolean isColumnStrike = isColumnStrike(moves);
         if (isColumnStrike) return true;
-        boolean isRowStrike = isSameRowStrike(moves);
+        boolean isRowStrike = isRowStrike(moves);
         if (isRowStrike) return true;
         return false;
     }
@@ -59,7 +59,7 @@ public class TicTacToe {
         return true;
     }
 
-    private boolean isSameColumnStrike(List<Cell> moves) {
+    private boolean isColumnStrike(List<Cell> moves) {
         moves.sort(Comparator.comparingInt(x -> x.col));
         int row = moves.get(0).getRow();
         int col = moves.get(0).getCol();
@@ -75,7 +75,7 @@ public class TicTacToe {
         return false;
     }
 
-    private boolean isSameRowStrike(List<Cell> moves) {
+    private boolean isRowStrike(List<Cell> moves) {
         moves.sort(Comparator.comparingInt(x -> x.row));
         int row = moves.get(0).getRow();
         int col = moves.get(0).getCol();
